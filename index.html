@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Floratta Repostería  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#6b4f3b; /* madera suave */
+      --muted:#f6f4f1;
+      --text:#222;
+      --card:#ffffff;
+      --container:1200px;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Montserrat,system-ui,Arial,sans-serif;color:var(--text);margin:0;background:var(--muted);line-height:1.4}
+    .wrap{max-width:var(--container);margin:0 auto;padding:28px}
+
+    /* Header / Nav */
+    header{background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.6));backdrop-filter: blur(2px);border-bottom:1px solid #eee}
+    .topbar{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:56px;height:56px;border-radius:8px;background:var(--accent);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-family:Playfair Display;font-size:18px}
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    nav a{color:var(--text);text-decoration:none;font-weight:500}
+    .actions{display:flex;gap:12px;align-items:center}
+    .cta{background:var(--accent);color:white;padding:8px 14px;border-radius:8px;text-decoration:none}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:start;padding:40px 0}
+    .hero .texto h1{font-family:Playfair Display,serif;font-size:38px;margin:0 0 12px}
+    .hero .texto p{margin:0 0 18px;color:#444}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+
+    /* Product grid */
+    .products{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+    .product-card{padding:14px;border-radius:10px;background:linear-gradient(180deg,#fff,#fcfbfa);min-height:220px}
+    .product-card h3{margin:0 0 8px;font-size:18px}
+    .product-card p{margin:0;color:#666;font-size:14px}
+
+    /* Sidebar forms */
+    form .form-row{display:flex;flex-direction:column;margin-bottom:10px}
+    input[type=text],input[type=email],input[type=password],select{padding:10px;border:1px solid #ddd;border-radius:8px}
+    label{font-size:13px;margin-bottom:6px;color:#444}
+    .small{font-size:13px;color:#777}
+
+    /* Sections */
+    section{margin:28px 0}
+    .two-col{display:grid;grid-template-columns:1fr 360px;gap:22px}
+
+    footer{padding:28px 0;color:#666;font-size:14px}
+
+    /* responsive */
+    @media(max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .products{grid-template-columns:repeat(2,1fr)}
+      .two-col{grid-template-columns:1fr}
+    }
+    @media(max-width:620px){
+      .products{grid-template-columns:1fr}
+      nav ul{display:none}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap topbar">
+      <div class="brand">
+        <img src="img/Vereda.JPG"  width="200"/>
+        <div>
+          <div style="font-weight:700"> </div>
+          <div style="font-family:Playfair Display;font-size:18px;margin-top:-6px"> </div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#sobre">Sobre nosotros</a></li>
+          <li><a href="#temporada">Productos de Temporada</a></li>
+          <li><a href="#vereda">Productos Vereda</a></li>
+          <li><a href="#personalizacion">Personalización</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="actions">     
+        <a class="small" href="#login">Inicio de sesión</a>
+        <a class="cta" href="#registrarse">Registrarse</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="texto">
+        <div class="card">
+          <h1>Ofrecemos una experiencia diferente</h1>
+          <p>Ofrecemos una experiencia diferente a nuestros clientes a través de la creación de repostería y pastelería personalizada, utilizando ingredientes de alta calidad y diseños innovadores que reflejen la elegancia y la atención al detalle.</p>
+          <p class="small">Nos reunimos contigo para entender tu estilo asegurando que cada detalle de tu ocasión refleje la magia del momento. Consultoría Personalizada.</p>
+        </div>
+
+        <div class="products">
+          <div class="product-card card">
+            <h3>CAKE FRUTAL</h3>
+            <p>Nuestros cake frutales se caracterizan por sus sabores naturales, frescos y tradicionales con creaciones visualmente llamativas.</p>
+          </div>
+          <div class="product-card card">
+            <h3>CAKE ROMANTICO</h3>
+            <p>Reflejan delicadeza y elegancia; texturas aterciopeladas y sabores suaves.</p>
+          </div>
+          <div class="product-card card">
+            <h3>CAKE FLORAL</h3>
+            <p>Las flores dan vida y color; comestibles o naturales, sobre buttercream, chocolate o fondant.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3 style="margin-top:0">Ingreso / Registro</h3>
+          <form id="login">
+            <div class="form-row">
+              <label>Correo / Nombre de usuario</label>
+              <input type="email" placeholder="tu@correo.com" />
+            </div>
+            <div class="form-row">
+              <label>Contraseña</label>
+              <input type="password" placeholder="********" />
+            </div>
+            <div style="display:flex;gap:8px;align-items:center;margin-top:8px">
+              <button class="cta" type="button">Iniciar sesión</button>
+              <a class="small" href="#olvido">Olvidé contraseña</a>
+            </div>
+          </form>
+        </div>
+
+        <div style="height:18px"></div>
+
+        <div class="card">
+          <h4 style="margin:0 0 8px">Método de envío</h4>
+          <p class="small">Medellín - Área Metropolitana 10.000<br>Oriente Cercano 15.000</p>
+          <h4 style="margin-top:12px">Métodos de pago</h4>
+          <p class="small">La misma del contacto / Otra dirección</p>
+        </div>
+      </aside>
+    </section>
+
+    <section id="personalizacion" class="two-col">
+      <div>
+        <div class="card">
+          <h2 style="margin-top:0">Personalizados</h2>
+          <p>Personalizamos tu ocasión. Diseños personalizados y sabores especiales. Montaje y desmontaje. Desde el centro de atención que es la torta hasta las mesas de dulces y postres.</p>
+          <p class="small">Asesoría personalizada y consultoría para eventos e institucionales.</p>
+        </div>
+
+        <div style="height:18px"></div>
+
+        <div class="card">
+          <h3>Tendencias 2025 — Tortas de Novia</h3>
+          <p>Las "long wedding cake" y decoraciones con motivos florales sutiles: blancos y tonos suaves que complementan el entorno.</p>
+        </div>
+      </div>
+
+      <aside class="card">
+        <h3>Contacto</h3>
+        <p class="small">Guarne, Antioquia<br>florattapasteleria@gmail.com<br>319 412 2610</p>
+        <a href="https://wa.me/" class="cta" style="display:inline-block;margin-top:10px;text-decoration:none">Contactar por WhatsApp</a>
+      </aside>
+    </section>
+
+    <section id="productos">
+      <h2>Productos Floratta</h2>
+      <div class="products" style="margin-top:12px">
+        <div class="product-card card"><h3>CAKE ARTÍSTICO</h3><p>Diseños artísticos y personalizados sobre fondant o chocolate.</p></div>
+        <div class="product-card card"><h3>EVENTOS</h3><p>Selección de productos para mesas dulces y postres según el tipo de evento.</p></div>
+        <div class="product-card card"><h3>INSTITUCIONAL</h3><p>Personalizamos productos para eventos corporativos y diseñamos el menú según la ocasión.</p></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="wrap">
+    <div class="card" style="display:flex;justify-content:space-between;align-items:center">
+      <div>
+        <strong>Floratta Pastelería</strong>
+        <div class="small">Diseños y creaciones personalizadas</div>
+      </div>
+      <div class="small">© <span id="year"></span></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
